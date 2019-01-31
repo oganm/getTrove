@@ -25,7 +25,7 @@ getFiles = function(path){
         lapply(function(fileRelLink){
             filepath = file.path(path,URLdecode(fileRelLink))
             fileURL = file.path(rootURL,fileRelLink)
-            download.file(fileURL,filepath)
+            download.file(fileURL,filepath,mode = 'wb')
         })
     
     
